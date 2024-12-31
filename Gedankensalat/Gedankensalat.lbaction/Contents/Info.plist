@@ -9,7 +9,7 @@
 	<key>CFBundleName</key>
 	<string>Gedankensalat</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>2.0.1</string>
 	<key>LBDescription</key>
 	<dict>
 		<key>LBAuthor</key>
@@ -17,7 +17,7 @@
 		<key>LBEmail</key>
 		<string></string>
 		<key>LBSummary</key>
-		<string>⇧⏎ = Setup (File Location)</string>
+		<string>⌥⏎ = Setup (File Location)</string>
 		<key>LBTwitter</key>
 		<string></string>
 		<key>LBWebsiteURL</key>

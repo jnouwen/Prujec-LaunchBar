@@ -132,16 +132,19 @@ function show() {
     return fileLocationOptions();
   }
 
+  // the .* is to ensure we capture date formats that end in a meridiem indicator (i.e. am/pm/AM/PM)
+  let regex = /\d\d.*: /;
+    
   return lines
     .filter((line) => line !== '')
     .map((line) => ({
-      title: line.split(/\d\d: /)[1],
-      subtitle: line.split(/\d\d: /)[0].replace(/:$/, ''),
+      title: line.split(regex)[1],
+      subtitle: (line.match(regex) ?? '').toString().slice(0,-2),
       icon: '_Template',
       action: 'action',
       actionArgument: {
         line,
-        title: line.split(/\d\d: /)[1],
+        title: line.split(regex)[1],
       },
       alwaysShowsSubtitle: true,
     }))
